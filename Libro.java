@@ -9,4 +9,16 @@ public class Libro
         titulo = tituloLibro;
         autor = autorLibro;
     }
+    
+    //metodo de acceso
+    public String dimeAutor()
+    {
+        return autor;
+    }
+    
+    public String dimeTitulo()
+    {
+        return titulo;
+    }
+    
 }
