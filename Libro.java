@@ -6,6 +6,7 @@ public class Libro
     private int paginas;
     private String numeroDeReferencia;
     private String detalles;
+    private int prestamos;
     
     public Libro(String tituloLibro, String autorLibro, int paginasLibro)
     {
@@ -14,6 +15,7 @@ public class Libro
         paginas = paginasLibro;
         detalles = "";
         numeroDeReferencia = "";
+        prestamos = 0;
     }
     
     //metodo de acceso
@@ -36,11 +38,11 @@ public class Libro
     {
          if (numeroDeReferencia.length() > 0)
          {
-             detalles ="Titulo " +titulo+ "," +"Autor: " +autor+ "," + "Páginas: "+paginas+ "Numero de Referencia: " +numeroDeReferencia;
+             detalles ="Titulo " +titulo+ "," +"Autor: " +autor+ "," + "Páginas: "+paginas+ "Numero de Referencia: " +numeroDeReferencia+ "Prestamos: " +prestamos;
          }
          else
          {
-             detalles ="Titulo " +titulo+ "," +"Autor: " +autor+ "," + "Páginas: "+paginas+ "Numero de Referencia: " +"ZZZ";
+             detalles ="Titulo " +titulo+ "," +"Autor: " +autor+ "," + "Páginas: "+paginas+ "Numero de Referencia: " +"ZZZ"+ "Prestamos: " +prestamos;;
          }
   
          return detalles;
@@ -58,4 +60,15 @@ public class Libro
     {
         return numeroDeReferencia;
     }
+    
+    public void prestar()
+    {
+        prestamos++;
+    }
+    
+    public int dimePrestamos()
+    {
+        return prestamos;
+    }
+    
 }
